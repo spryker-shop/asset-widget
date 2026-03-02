@@ -15,35 +15,21 @@ use Spryker\Yves\Kernel\Widget\AbstractWidget;
  */
 class AssetWidget extends AbstractWidget
 {
-    /**
-     * @param string $slotKey
-     */
     public function __construct(string $slotKey)
     {
         $this->addParameter('assetSlotContent', $this->getAssetSlotContent($slotKey));
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'AssetWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@AssetWidget/views/asset/asset.twig';
     }
 
-    /**
-     * @param string $slotKey
-     *
-     * @return string
-     */
     protected function getAssetSlotContent(string $slotKey): string
     {
         $assetSlotContentRequestTransfer = (new AssetSlotContentRequestTransfer())

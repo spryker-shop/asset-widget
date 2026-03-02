@@ -18,9 +18,6 @@ use SprykerShop\Yves\AssetWidget\Dependency\Client\AssetWidgetToStoreClientInter
  */
 class AssetWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\AssetWidget\Business\AssetWidgetDataProviderInterface
-     */
     public function createAssetWidgetDataProvider(): AssetWidgetDataProviderInterface
     {
         return new AssetWidgetDataProvider(
@@ -29,17 +26,11 @@ class AssetWidgetFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\AssetWidget\Dependency\Client\AssetWidgetToAssetStorageClientInterface
-     */
     public function getAssetStorageClient(): AssetWidgetToAssetStorageClientInterface
     {
         return $this->getProvidedDependency(AssetWidgetDependencyProvider::CLIENT_ASSET_STORAGE);
     }
 
-    /**
-     * @return \SprykerShop\Yves\AssetWidget\Dependency\Client\AssetWidgetToStoreClientInterface
-     */
     public function getStoreClient(): AssetWidgetToStoreClientInterface
     {
         return $this->getProvidedDependency(AssetWidgetDependencyProvider::CLIENT_STORE);

@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\AssetSlotContentResponseTransfer;
 
 interface AssetWidgetDataProviderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\AssetSlotContentRequestTransfer $assetSlotContentRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AssetSlotContentResponseTransfer
-     */
     public function getSlotContent(AssetSlotContentRequestTransfer $assetSlotContentRequestTransfer): AssetSlotContentResponseTransfer;
 }

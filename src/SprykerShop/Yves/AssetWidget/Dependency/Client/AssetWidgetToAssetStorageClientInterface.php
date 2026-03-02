@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\AssetStorageCriteriaTransfer;
 
 interface AssetWidgetToAssetStorageClientInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\AssetStorageCriteriaTransfer $assetStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\AssetStorageCollectionTransfer
-     */
     public function getAssetCollection(
         AssetStorageCriteriaTransfer $assetStorageCriteriaTransfer
     ): AssetStorageCollectionTransfer;

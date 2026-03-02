@@ -25,11 +25,6 @@ class AssetWidgetToAssetStorageClientBridge implements AssetWidgetToAssetStorage
         $this->assetStorageClient = $assetStorageClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AssetStorageCriteriaTransfer $assetStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\AssetStorageCollectionTransfer
-     */
     public function getAssetCollection(
         AssetStorageCriteriaTransfer $assetStorageCriteriaTransfer
     ): AssetStorageCollectionTransfer {

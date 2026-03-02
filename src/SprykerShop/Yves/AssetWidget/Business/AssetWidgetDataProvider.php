@@ -30,10 +30,6 @@ class AssetWidgetDataProvider implements AssetWidgetDataProviderInterface
      */
     protected $storeClient;
 
-    /**
-     * @param \SprykerShop\Yves\AssetWidget\Dependency\Client\AssetWidgetToAssetStorageClientInterface $assetStorageClient
-     * @param \SprykerShop\Yves\AssetWidget\Dependency\Client\AssetWidgetToStoreClientInterface $storeClient
-     */
     public function __construct(
         AssetWidgetToAssetStorageClientInterface $assetStorageClient,
         AssetWidgetToStoreClientInterface $storeClient
@@ -42,11 +38,6 @@ class AssetWidgetDataProvider implements AssetWidgetDataProviderInterface
         $this->storeClient = $storeClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AssetSlotContentRequestTransfer $assetSlotContentRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AssetSlotContentResponseTransfer
-     */
     public function getSlotContent(AssetSlotContentRequestTransfer $assetSlotContentRequestTransfer): AssetSlotContentResponseTransfer
     {
         $assetStorageCriteriaTransfer = (new AssetStorageCriteriaTransfer())
@@ -65,9 +56,6 @@ class AssetWidgetDataProvider implements AssetWidgetDataProviderInterface
             ->setContent($content);
     }
 
-    /**
-     * @return string
-     */
     protected function getCurrentStoreName(): string
     {
         if (!static::$currentStoreName) {

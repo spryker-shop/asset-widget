@@ -27,11 +27,6 @@ class AssetWidgetDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const CLIENT_STORE = 'CLIENT_STORE';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = $this->addAssetStorageClient($container);
@@ -40,11 +35,6 @@ class AssetWidgetDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addAssetStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_ASSET_STORAGE, function (Container $container) {
@@ -56,11 +46,6 @@ class AssetWidgetDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addStoreClient(Container $container): Container
     {
         $container->set(static::CLIENT_STORE, function (Container $container) {
